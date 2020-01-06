@@ -1,0 +1,62 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TelerikWpfApp1"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TelerikWpfApp1.PageGestionEt"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1300"
+    
+      Title="PageGestionEt">
+
+    <Grid>
+
+        <StackPanel>
+
+            <StackPanel.Background>
+                <ImageBrush ImageSource="photos\back9.jpg" Stretch="UniformToFill"/>
+            </StackPanel.Background>
+
+            <Border
+                CornerRadius="5"
+                 Background="#FF949D44" HorizontalAlignment="Center" Margin="0,40,0,0">
+                <Label
+                   Content="Fenêtre de Modification des étudiants"
+                HorizontalAlignment="Center" Foreground="White" FontFamily="Microsoft YaHei UI" FontSize="20" Margin="0" FontWeight="Bold" Opacity="0.9" Padding="10"/>
+            </Border>
+
+
+            <Image x:Name="photo" Height="160" Width="160" Margin="0,25,0,20"></Image>
+            <Border
+                CornerRadius="5"
+                 Background="#FFD29F0D" HorizontalAlignment="Center">
+                <Label x:Name="Browse" Content="Modifier l'image" HorizontalAlignment="Center" Foreground="White" Opacity="90" MouseDoubleClick="Browse_Click" FontFamily="Microsoft YaHei UI" FontSize="14" FontWeight="Bold"/>
+            </Border>
+            
+
+            <telerik:RadDataForm 
+                x:Name="radDataForm1" 
+                Header="Test"
+                Margin="130,25,130,30"
+                AutoGenerateFields="true"
+                CurrentItemChanged="Data_CurrentItemChanged"
+                EditEnding="Data_EditEnding"
+                DeletingItem="Data_DeletingItem" AutoGeneratingField="RadDataForm1_AutoGeneratingField">
+                <telerik:RadDataForm.Background>
+                    <SolidColorBrush Color="White" Opacity="0.9"/>
+                </telerik:RadDataForm.Background>
+            </telerik:RadDataForm>
+
+
+            <Button x:Name="btn_retour" Content="Retour" HorizontalAlignment="Center" Click="Btn_retour_Click"  ></Button>
+
+
+        </StackPanel>
+
+
+    </Grid>
+
+
+
+</Page>
