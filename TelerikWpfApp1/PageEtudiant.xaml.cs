@@ -41,7 +41,7 @@ namespace TelerikWpfApp1
             List<Filiere> filieres = fil.ToList();
             try
             {
-                titre_grid.Content = "Les Etudiants de " + filieres[index].Nom_filiere;
+                titre_grid.Content = "Les Etudiants de la " + filieres[index].Nom_filiere;
                 info_filiere.Content = "Filière : " + filieres[index].Nom_filiere;
                 info_responsable.Content = "Responsable : " + filieres[index].Nom_responsable;
                 myBorder.Visibility = Visibility.Visible;
